@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "3de26f3b-3580-4b37-bad3-e500aa048d37",
+		"name": "FitnessTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38988773",
+		"_collection_link": "https://speeding-zodiac-755542.postman.co/workspace/New-Team-Workspace~22f48ca8-e90f-4acd-b5fc-901f67be4959/collection/38988773-3de26f3b-3580-4b37-bad3-e500aa048d37?action=share&source=collection_link&creator=38988773"
+	},
+	"item": [
+		{
+			"name": "Workouts",
+			"item": [
+				{
+					"name": "AddWorkout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"648e3b6f3d7a123456789abc\",\r\n  \"name\": \"Full Body Strength Training\",\r\n  \"category\": \"Strength\",\r\n  \"exercises\": [\r\n    {\r\n      \"exerciseName\": \"Bench Press\",\r\n      \"sets\": 4,\r\n      \"reps\": 12,\r\n      \"weights\": 50,\r\n      \"notes\": \"Focus on form and breathing\"\r\n    },\r\n    {\r\n      \"exerciseName\": \"Squats\",\r\n      \"sets\": 3,\r\n      \"reps\": 10,\r\n      \"weights\": 70,\r\n      \"notes\": \"Go for depth and control\"\r\n    },\r\n    {\r\n      \"exerciseName\": \"Deadlift\",\r\n      \"sets\": 3,\r\n      \"reps\": 8,\r\n      \"weights\": 90,\r\n      \"notes\": \"Engage core throughout\"\r\n    }\r\n  ],\r\n  \"date\": \"2024-11-26T10:30:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/workout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/workout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WorkoutByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/workout/67458af8d4d709cde0793ba2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workout",
+								"67458af8d4d709cde0793ba2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateWorkout",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"648e3b6f3d7a123456789abc\",\r\n  \"name\": \"Huzaifa exercises\",\r\n  \"category\": \"Strength\",\r\n  \"exercises\": [\r\n    {\r\n      \"exerciseName\": \"Bench Press\",\r\n      \"sets\": 4,\r\n      \"reps\": 12,\r\n      \"weights\": 50,\r\n      \"notes\": \"Focus on form and breathing\"\r\n    },\r\n    {\r\n      \"exerciseName\": \"Squats\",\r\n      \"sets\": 3,\r\n      \"reps\": 10,\r\n      \"weights\": 70,\r\n      \"notes\": \"Go for depth and control\"\r\n    },\r\n    {\r\n      \"exerciseName\": \"Deadlift\",\r\n      \"sets\": 3,\r\n      \"reps\": 8,\r\n      \"weights\": 90,\r\n      \"notes\": \"Engage core throughout\"\r\n    }\r\n  ],\r\n  \"date\": \"2024-11-26T10:30:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/workout/67458af8d4d709cde0793ba2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"workout",
+								"67458af8d4d709cde0793ba2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteWorkout",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "userWorkout",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Regsiter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userName",
+									"value": "Huzaifa",
+									"type": "text"
+								},
+								{
+									"key": "userEmail",
+									"value": "huzaifa@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userImage",
+									"type": "file",
+									"src": "/C:/Users/a/Downloads/css-3.png"
+								},
+								{
+									"key": "\"userPassword\"",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"admin\",\r\n    \"userPassword\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Food Items",
+			"item": [
+				{
+					"name": "GetAllFoods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/fooditem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"fooditem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddFoodItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Chicken Breast\",\r\n    \"calories\": 165,\r\n    \"macros\": {\r\n      \"carbs\": 0,\r\n      \"protein\": 31,\r\n      \"fat\": 3.6\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/fooditem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"fooditem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateFoodItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"name\": \"mango\",\r\n    \"calories\": 165,\r\n    \"macros\": {\r\n      \"carbs\": 0,\r\n      \"protein\": 31,\r\n      \"fat\": 3.6\r\n      \r\n      }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/fooditem/674604a82383aa4a28dbc194",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"fooditem",
+								"674604a82383aa4a28dbc194"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFoodItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/fooditem/674604a82383aa4a28dbc19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"fooditem",
+								"674604a82383aa4a28dbc19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nutrition Tracking",
+			"item": [
+				{
+					"name": "GetNutrition",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AddNutition",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"6744b42f20a31794e1cc5263\", \r\n  \"meals\": [\r\n    {\r\n      \"mealType\": \"Breakfast\",\r\n      \"foodItems\": [\r\n        {\r\n          \"foodItemId\": \"67460abc07aa75ddbedeb507\"\r\n        },\r\n        {\r\n          \"foodItemId\": \"67460acb07aa75ddbedeb50a\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"mealType\": \"Lunch\",\r\n      \"foodItems\": [\r\n        {\r\n          \"foodItemId\": \"67460acb07aa75ddbedeb50a\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/nutritionTracking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"nutritionTracking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
